@@ -1,0 +1,355 @@
+/* =============================================
+   components.css - Reusable UI Components
+   Digital Notice Board System - PEC
+   ============================================= */
+
+/* ---- BUTTONS ---- */
+.btn-primary {
+  padding: 9px 20px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37,99,235,0.35);
+}
+
+.btn-cancel {
+  padding: 9px 20px;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-cancel:hover { background: #e2e8f0; }
+
+.btn-edit {
+  padding: 5px 12px;
+  background: #f59e0b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 6px;
+  transition: background 0.15s;
+}
+
+.btn-edit:hover { background: #d97706; }
+
+.btn-delete {
+  padding: 5px 12px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-delete:hover { background: #dc2626; }
+
+/* ---- NOTICE CARDS ---- */
+.notice-container {
+  width: 90%;
+  margin: 20px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.notice-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  border-top: 4px solid #2563eb;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.notice-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(37,99,235,0.13);
+}
+
+.notice-card h3 {
+  font-size: 16px;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.notice-card p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.notice-card small {
+  font-size: 12px;
+  color: #94a3b8;
+  display: block;
+}
+
+/* ---- EVENT CARDS ---- */
+.events-container {
+  width: 90%;
+  margin: 20px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  border-top: 4px solid #10b981;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.event-card:hover { transform: translateY(-3px); }
+
+.event-card h3 {
+  font-size: 16px;
+  color: #065f46;
+  font-weight: 700;
+}
+
+.event-card p {
+  font-size: 14px;
+  color: #475569;
+  flex: 1;
+}
+
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.event-meta span {
+  font-size: 12px;
+  background: #f0fdf4;
+  color: #166534;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.event-card small {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* ---- ANNOUNCEMENT CARDS ---- */
+.announcement-container {
+  width: 90%;
+  margin: 20px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.announcement-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.announcement-card:hover { transform: translateY(-3px); }
+
+.announcement-card.priority-high   { border-top: 4px solid #ef4444; }
+.announcement-card.priority-medium { border-top: 4px solid #f59e0b; }
+.announcement-card.priority-low    { border-top: 4px solid #10b981; }
+
+.announcement-card h3 {
+  font-size: 16px;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.announcement-card p {
+  font-size: 14px;
+  color: #475569;
+  flex: 1;
+  line-height: 1.5;
+}
+
+.announcement-card small {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* ---- CARD ACTIONS ---- */
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #f1f5f9;
+}
+
+/* ---- BADGES ---- */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-exam    { background: #dbeafe; color: #1d4ed8; }
+.badge-event   { background: #dcfce7; color: #166534; }
+.badge-holiday { background: #fef9c3; color: #92400e; }
+.badge-general { background: #f3e8ff; color: #6b21a8; }
+
+.priority-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.priority-high   { background: #fee2e2; color: #b91c1c; }
+.priority-medium { background: #fef3c7; color: #92400e; }
+.priority-low    { background: #dcfce7; color: #166534; }
+
+/* ---- ROLE BADGE ---- */
+.role-badge {
+  display: inline-block;
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.role-teacher { background: #eff6ff; color: #1d4ed8; border: 1.5px solid #bfdbfe; }
+.role-student { background: #f0fdf4; color: #15803d; border: 1.5px solid #bbf7d0; }
+
+/* ---- MODAL ---- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.modal {
+  background: white;
+  padding: 32px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal h3 {
+  font-size: 20px;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.modal label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 14px;
+  margin-bottom: 5px;
+}
+
+.modal input,
+.modal textarea,
+.modal select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+  transition: border 0.2s;
+}
+
+.modal input:focus,
+.modal textarea:focus,
+.modal select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+/* ---- TOAST NOTIFICATION ---- */
+.toast {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  padding: 13px 22px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+  max-width: 320px;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast-success { background: #059669; }
+.toast-error   { background: #dc2626; }
+.toast-info    { background: #2563eb; }
