@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Announcements - Digital Notice Board</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="navbar-brand">
+      <img src="../images/logocc.jpeg" alt="LOGOCC" class="nav-logo">
+      <h2>Digital Notice Board</h2>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="notices.html">Notices</a>
+      <a href="event.html">Events</a>
+      <a href="annoc.html">Announcements</a>
+      <a href="admindb.html" id="nav-dashboard" style="display:none;">Dashboard</a>
+      <span id="nav-username" class="nav-username"></span>
+      <a href="login.html" id="nav-login">Login</a>
+      <a href="#" id="nav-logout" style="display:none;" id="logout-btn">Logout</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-header">
+  <h2>📢 Important Announcements</h2>
+  <span id="role-badge" class="role-badge"></span>
+</div>
+
+<div class="toolbar">
+  <button id="add-announcement-btn" class="btn-primary" style="display:none;" onclick="openModal('add-announcement-modal')">➕ Add Announcement</button>
+</div>
+
+<div class="announcement-container" id="announcements-container">
+  <p style="text-align:center;color:#666;">Loading announcements...</p>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <div>
+      <h3>About Us</h3>
+      <p>Digital Notice Board System — Pragati Engineering College</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>Pragati Engineering College</p>
+      <p> ADB road,Surampalem,Andhra Pradesh</p>
+    </div>
+    <div>
+      <h3>Follow Us</h3>
+      <div class="social">
+        <a href=" https://www.instagram.com/pragatiengineering/ ">Instagram</a>
+        <a href="https://www.facebook.com/PragatiEngineeeringCollege/">Facebook</a>
+      </div>
+    </div>
+  </div>
+  
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<!-- Add Announcement Modal -->
+<div id="add-announcement-modal" class="modal-overlay" style="display:none;">
+  <div class="modal">
+    <h3>📢 Add Announcement</h3>
+    <form id="add-announcement-form">
+      <label>Title</label>
+      <input type="text" id="ann-title" placeholder="Announcement title" required>
+      <label>Description</label>
+      <textarea id="ann-desc" rows="3" placeholder="Announcement details..." required></textarea>
+      <label>Priority</label>
+      <select id="ann-priority">
+        <option value="high">🔴 High</option>
+        <option value="medium">🟡 Medium</option>
+        <option value="low">🟢 Low</option>
+      </select>
+      <div class="modal-actions">
+        <button type="submit" class="btn-primary"> Post</button>
+        <button type="button" class="btn-cancel" onclick="closeModal('add-announcement-modal')">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="../js/auth.js"></script>
+<script src="../js/notices.js"></script>
+<script src="../js/announcements.js"></script>
+<script src="../js/events.js"></script>
+<script src="../js/ui.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
