@@ -38,3 +38,5 @@ README.md
 ##Contributers 
 D.Vagdevi - 25A35A0508 
 D.Harshini Sri - 24A31A0571
+Karupothu Rahul - 24A31A05AN
+Chilukuri Durga Prasad - 24A31A05AJ
