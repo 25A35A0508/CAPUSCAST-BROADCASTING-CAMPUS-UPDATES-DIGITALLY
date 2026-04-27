@@ -33,3 +33,8 @@ main.js
 notice.js
 auth.js
 README.md
+
+
+##Contributers 
+D.Vagdevi - 25A35A0508 
+D.Harshini Sri - 24A31A0571
